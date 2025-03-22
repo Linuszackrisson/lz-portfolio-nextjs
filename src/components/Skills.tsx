@@ -80,7 +80,12 @@ const Skills = () => {
 
   return (
     <div>
-      <h2 className="text-2xl font-semibold text-heading mt-16">Teknisk Kompetens</h2>
+        <div className="skill-title flex flex-row items-center justify-between mt-16">
+      <h2 className="text-2xl font-semibold text-heading ">Teknisk Kompetens</h2>
+      <div className="skill-title-p"><p className="text-paragraph">💡 Klicka på en ikon för att läsa mer!</p>
+      </div>
+      
+      </div>
       <div className="skill-icons flex flex-wrap justify-center gap-3 mt-4">
         {skills.map((skill) => (
           <div key={skill.name} className="relative">
