@@ -79,32 +79,30 @@ const Skills = () => {
   const [activeSkill, setActiveSkill] = useState<Skill | null>(null);
 
   return (
-    <div>
-        <div className="skill-title flex flex-row items-center justify-between mt-16">
-      <h2 className="text-2xl font-semibold text-heading ">Teknisk Kompetens</h2>
-      <div className="skill-title-p"><p className="text-paragraph">💡 Klicka på en ikon för att läsa mer!</p>
-      </div>
-      
-      </div>
-      <div className="skill-icons flex flex-wrap justify-center gap-3 mt-4">
-        {skills.map((skill) => (
-          <div key={skill.name} className="relative">
-            <img
-              src={`https://skillicons.dev/icons?i=${skill.icon}`}
-              alt={skill.name}
-              className="w-12 h-12 hover:opacity-80 transition-opacity cursor-pointer"
-              onClick={() => setActiveSkill(activeSkill?.name === skill.name ? null : skill)}
-            />
-            {activeSkill?.name === skill.name && (
-              <div className="absolute z-50 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg mt-2 w-64 text-sm">
-                <h3 className="font-semibold text-heading mb-2">{skill.name}</h3>
-                <p className="text-paragraph">{skill.description}</p>
-                <div className="absolute -top-2 left-4 w-4 h-4 bg-white dark:bg-gray-800 transform rotate-45"></div>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+    <div className="max-w-fit">
+        <div className="skill-title flex flex-row items-center justify-between w-full mt-16">
+          <h2 className="text-2xl font-semibold text-heading">Teknisk Kompetens</h2>
+          <p className="text-paragraph text-sm">💡 Klicka på en ikon för att läsa mer!</p>
+        </div>
+        <div className="skill-icons flex flex-wrap gap-3 mt-4">
+          {skills.map((skill) => (
+            <div key={skill.name} className="relative">
+              <img
+                src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                alt={skill.name}
+                className="w-13 h-13 hover:opacity-80 transition-opacity cursor-pointer"
+                onClick={() => setActiveSkill(activeSkill?.name === skill.name ? null : skill)}
+              />
+              {activeSkill?.name === skill.name && (
+                <div className="absolute z-50 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg mt-2 w-64 text-sm">
+                  <h3 className="font-semibold text-heading mb-2">{skill.name}</h3>
+                  <p className="text-paragraph">{skill.description}</p>
+                  <div className="absolute -top-2 left-4 w-4 h-4 bg-white dark:bg-gray-800 transform rotate-45"></div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
     </div>
   );
 };
