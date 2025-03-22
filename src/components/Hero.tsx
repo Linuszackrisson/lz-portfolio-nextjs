@@ -1,6 +1,7 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import Image from 'next/image';
 import linuspfp from '../../public/linuspfp2.jpg';
+import Skills from './Skills';
 
 const Hero = () => {
   return (
@@ -36,22 +37,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <h2 className="text-2xl font-semibold text-heading mt-16">Teknisk Kompetens</h2>
-            <div className="skill-icons flex flex-wrap justify-center gap-3 mt-4">
-              <img src="https://skillicons.dev/icons?i=html" alt="HTML" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=css" alt="CSS" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=react" alt="React" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=rails" alt="Ruby on Rails" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=aws" alt="AWS" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=github" alt="GitHub" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=supabase" alt="Supabase" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-              <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase" className="w-12 h-12 hover:opacity-80 transition-opacity" />
-            </div>
+            <Skills />
           </main>
         </div>
       </div>
