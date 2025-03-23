@@ -10,18 +10,18 @@ const Hero = () => {
         <div className="flex flex-col items-left justify-center min-h-screen">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-x-16">
             <div className="lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-heading text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold text-heading leading-tight">
                 Fullstack <br /> Utvecklare
               </h1>
-              <p className="text-paragraph text-xl mt-10">
+              <p className="text-base md:text-xl text-paragraph mt-10">
                 Hej! Jag heter Linus Zackrisson och är en passionerad och entusiastisk utvecklare lokaliserad i Arvika.📍
               </p>
               
               <div className="flex justify-center lg:justify-start mt-10 space-x-4 text-heading">
-                <a href="https://www.linkedin.com/in/linus-zackrisson/" target="_blank" rel="noopener noreferrer" className="text-5xl hover:text-[#0d9275] transition-colors">
+                <a href="https://www.linkedin.com/in/linus-zackrisson/" target="_blank" rel="noopener noreferrer" className="text-4xl md:text-5xl hover:text-[#0d9275] transition-colors">
                   <FaLinkedin />
                 </a>
-                <a href="https://github.com/linuszackrisson" target="_blank" rel="noopener noreferrer" className="text-5xl hover:text-[#0d9275] transition-colors">
+                <a href="https://github.com/linuszackrisson" target="_blank" rel="noopener noreferrer" className="text-4xl md:text-5xl hover:text-[#0d9275] transition-colors">
                   <FaGithub />
                 </a>
               </div>

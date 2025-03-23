@@ -81,8 +81,8 @@ const Skills = () => {
   return (
     <div className="max-w-fit">
         <div className="skill-title flex flex-row items-center justify-between w-full mt-16">
-          <h2 className="text-2xl font-semibold text-heading">Teknisk Kompetens</h2>
-          <p className="text-paragraph text-sm">💡 Klicka på en ikon för att läsa mer!</p>
+          <h2 className="text-2xl md:text-3xl font-semibold text-heading">Teknisk Kompetens</h2>
+          <p className="text-sm md:text-base text-paragraph">💡 Klicka på en ikon för att läsa mer!</p>
         </div>
         <div className="skill-icons flex flex-wrap gap-3 mt-4">
           {skills.map((skill) => (
@@ -94,9 +94,9 @@ const Skills = () => {
                 onClick={() => setActiveSkill(activeSkill?.name === skill.name ? null : skill)}
               />
               {activeSkill?.name === skill.name && (
-                <div className="absolute z-50 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg mt-2 w-64 text-sm">
-                  <h3 className="font-semibold text-heading mb-2">{skill.name}</h3>
-                  <p className="text-paragraph">{skill.description}</p>
+                <div className="absolute z-50 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg mt-2 w-64">
+                  <h3 className="text-base md:text-lg font-semibold text-heading mb-2">{skill.name}</h3>
+                  <p className="text-sm md:text-base text-paragraph leading-relaxed">{skill.description}</p>
                   <div className="absolute -top-2 left-4 w-4 h-4 bg-white dark:bg-gray-800 transform rotate-45"></div>
                 </div>
               )}

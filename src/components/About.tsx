@@ -32,21 +32,19 @@ const About = () => {
 
                     {/* Right side with information */}
                     <div className="w-full md:w-1/2 space-y-6">
-                        <h1 className="text-4xl font-bold text-gray-800">Om Mig</h1>
-                        <div className="space-y-4 text-gray-600 text-lg">
-    <p>
-        Jag heter Linus, är 31 år och bor i Arvika. Nyligen avslutade jag min frontendutbildning i Karlstad, där jag fick en stabil grund inom området. 
-        Utbildningen innehöll även flera backendkurser, vilket väckte mitt intresse för att bygga helhetslösningar.
-        <br />
-        <br />
-        De tekniker jag trivs bäst med är <span className="text-[#61DAFB]">React</span>, <span className="text-[#3178C6]">TypeScript</span> och <span className="text-[#38B2AC]">Tailwind</span>, ofta i kombination med <span className="text-[#3ECF8E]">Supabase</span>.
-        <br />
-        <br />
-        När jag inte sitter bakom skärmen hittar du mig på Arvika Tennisklubb eller i stadsparken – där jag gärna umgås med mina fem syskonbarn, som jag är en stolt morbror till.
-    </p>
-</div>
-
-
+                        <h2 className="text-3xl md:text-4xl font-bold text-heading">Om Mig</h2>
+                        <div className="space-y-4">
+                            <p className="text-base md:text-lg text-paragraph leading-relaxed">
+                                Jag heter Linus, är 31 år och bor i Arvika. Nyligen avslutade jag min frontendutbildning i Karlstad, där jag fick en stabil grund inom området. 
+                                Utbildningen innehöll även flera backendkurser, vilket väckte mitt intresse för att bygga helhetslösningar.
+                            </p>
+                            <p className="text-base md:text-lg text-paragraph leading-relaxed">
+                                De tekniker jag trivs bäst med är <span className="text-[#61DAFB]">React</span>, <span className="text-[#3178C6]">TypeScript</span> och <span className="text-[#38B2AC]">Tailwind</span>, ofta i kombination med <span className="text-[#3ECF8E]">Supabase</span>.
+                            </p>
+                            <p className="text-base md:text-lg text-paragraph leading-relaxed">
+                                När jag inte sitter bakom skärmen hittar du mig på Arvika Tennisklubb eller i stadsparken – där jag gärna umgås med mina fem syskonbarn, som jag är en stolt morbror till.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
