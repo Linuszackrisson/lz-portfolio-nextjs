@@ -6,6 +6,7 @@ const About = () => {
     return (
         <section id="om-mig" className="w-full bg-white">
             <div className="mx-auto w-full px-4 sm:px-6 md:px-8 max-w-3xl lg:max-w-5xl py-30">
+                <h2 className="text-3xl md:text-4xl font-bold text-heading mb-8">Om Mig</h2>
                 <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
                     {/* Left side with stacked cards */}
                     <div className="w-full md:w-1/2 h-[400px] relative group">
@@ -32,7 +33,6 @@ const About = () => {
 
                     {/* Right side with information */}
                     <div className="w-full md:w-1/2 space-y-6">
-                        <h2 className="text-3xl md:text-4xl font-bold text-heading">Om Mig</h2>
                         <div className="space-y-4">
                             <p className="text-base md:text-lg text-paragraph leading-relaxed">
                                 Jag heter Linus, är 31 år och bor i Arvika. Nyligen avslutade jag min frontendutbildning i Karlstad, där jag fick en stabil grund inom området. 

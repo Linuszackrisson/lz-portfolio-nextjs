@@ -84,12 +84,15 @@ const Skills = () => {
   const [activeSkill, setActiveSkill] = useState<Skill | null>(null);
 
   return (
-    <div className="max-w-fit">
-        <div className="skill-title flex flex-row items-center justify-between w-full mt-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-heading">Teknisk Kompetens</h2>
-          <p className="text-sm md:text-base text-paragraph">💡 Klicka på en ikon för att läsa mer!</p>
+    <div className="w-full">
+        <div className="skill-title flex flex-col w-full mt-16">
+          <h2 className="text-2xl md:text-3xl font-semibold text-heading mb-8">Teknisk Kompetens</h2>
+          <div className="flex items-center gap-2 text-base md:text-lg text-paragraph mb-8">
+            <span>Klicka på ikonerna för att läsa mer om mina erfarenheter</span>
+            <span className="animate-bounce">↓</span>
+          </div>
         </div>
-        <div className="skill-icons flex flex-wrap gap-3 mt-4">
+        <div className="skill-icons flex flex-wrap justify-center gap-2">
           {skills.map((skill) => (
             <div key={skill.name} className="relative">
               <img
