@@ -15,7 +15,7 @@ const About = () => {
                                 src="/maltesquare.jpg"
                                 alt="Maltes square"
                                 fill
-                                className="object-cover rounded-lg shadow-xl"
+                                className="object-cover rounded-md  border-1 border-gray-200/90"
                                 priority
                             />
                         </div>
@@ -25,7 +25,7 @@ const About = () => {
                                 src="/tommysquare.jpg"
                                 alt="Tommys square"
                                 fill
-                                className="object-cover rounded-lg shadow-xl"
+                                className="object-cover rounded-md  border-1 border-gray-200/90"
                             />
                         </div>
                     </div>
