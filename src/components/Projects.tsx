@@ -20,19 +20,20 @@ const Projects = () => {
             previewLink: "https://example.com/preview",
             githubLink: "https://github.com/yourusername/pickmyplate"
         },
-        {
-            title: "Cardclub.se",
-            description: "Implementerade en dynamisk framstegsindikator som motiverar kunder att nå en anpassningsbar spendergräns för att få en gratis gåva. Indikatorn uppdateras i realtid baserat på varukorgens totalsumma.",
-            image: "/cardclub.png",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            previewLink: "https://example.com/preview",
-            githubLink: "https://github.com/yourusername/cardclub"
-        },
+        
+        
         {
             title: "LZ Web Landing Page",
             description: "En landing page för en just nu fiktiv webbyrå i Arvika, skapad för att få en djupare förståelse för TailwindCSS och Typescript, med extra fokus på design och användarupplevelse.",
             image: "/lzweb.png",
             technologies: ["React", "TypeScript", "Tailwind"],
+            githubLink: "https://github.com/yourusername/lz-web"
+        },
+        {
+            title: "Morgan Freeware",
+            description: "En plattform där användare kan hitta gratis alternativ till kostsam programvara, bläddra bland kategorier och betygsätta olika program. Genom projektet fick jag en djupare förståelse för fullstack-utveckling, inklusive databashantering, backend-logik och frontend-design. ",
+            image: "/morganfreeware.png",
+            technologies: ["Next.js", "TypeScript", "Tailwind", "Supabase", "PostgreSQL"],
             githubLink: "https://github.com/yourusername/lz-web"
         }
     ];
