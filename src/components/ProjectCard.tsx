@@ -22,7 +22,9 @@ const getTechColor = (tech: string): { bg: string; text: string } => {
         'HTML': { bg: '#DC2626', text: '#FFFFFF' },
         'CSS': { bg: '#0EA5E9', text: '#FFFFFF' },
         'Tailwind': { bg: '#14B8A6', text: '#FFFFFF' },
-        'AWS': { bg: '#F97316', text: '#FFFFFF' }
+        'AWS': { bg: '#F97316', text: '#FFFFFF' },
+        'Next.js': { bg: '#000000', text: '#FFFFFF' },
+        'Supabase': { bg: '#3ECF8E', text: '#FFFFFF' }
     };
     return colors[tech] || { bg: '#2A2A2A', text: '#FFFFFF' };
 };

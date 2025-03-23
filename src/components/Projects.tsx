@@ -5,12 +5,12 @@ import ProjectCard from './ProjectCard';
 const Projects = () => {
     const projects = [
         {
-            title: "Anslagstavla-App",
-            description: "En fullstack-applikation för en digital anslagstavla där användare kan posta, ändra, ta bort och filtrera meddelanden efter användare och datum. Frontend byggd med React och deployad på AWS S3. Backend använder Serverless Framework med API Gateway, Lambda och DynamoDB.",
-            image: "/anslag.png",
-            technologies: ["React", "CSS", "JavaScript", "AWS"],
+            title: "Morgan Freeware",
+            description: "En plattform där användare kan hitta gratis alternativ till kostsam programvara, bläddra bland kategorier och betygsätta olika program. Genom projektet fick jag en djupare förståelse för fullstack-utveckling, inklusive databashantering, backend-logik och frontend-design. ",
+            image: "/morganfreeware.png",
+            technologies: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
             previewLink: "https://example.com/preview",
-            githubLink: "https://github.com/yourusername/anslagstavla"
+            githubLink: "https://github.com/yourusername/lz-web"
         },
         {
             title: "PickMyPlate",
@@ -20,20 +20,20 @@ const Projects = () => {
             previewLink: "https://example.com/preview",
             githubLink: "https://github.com/yourusername/pickmyplate"
         },
-        
-        
+        {
+            title: "Anslagstavla-App",
+            description: "En fullstack-applikation för en digital anslagstavla där användare kan posta, ändra, ta bort och filtrera meddelanden efter användare och datum. Frontend byggd med React och deployad på AWS S3. Backend använder Serverless Framework med API Gateway, Lambda och DynamoDB.",
+            image: "/anslag.png",
+            technologies: ["React", "CSS", "JavaScript", "AWS"],
+            previewLink: "https://example.com/preview",
+            githubLink: "https://github.com/yourusername/anslagstavla"
+        },
         {
             title: "LZ Web Landing Page",
             description: "En landing page för en just nu fiktiv webbyrå i Arvika, skapad för att få en djupare förståelse för TailwindCSS och Typescript, med extra fokus på design och användarupplevelse.",
             image: "/lzweb.png",
             technologies: ["React", "TypeScript", "Tailwind"],
-            githubLink: "https://github.com/yourusername/lz-web"
-        },
-        {
-            title: "Morgan Freeware",
-            description: "En plattform där användare kan hitta gratis alternativ till kostsam programvara, bläddra bland kategorier och betygsätta olika program. Genom projektet fick jag en djupare förståelse för fullstack-utveckling, inklusive databashantering, backend-logik och frontend-design. ",
-            image: "/morganfreeware.png",
-            technologies: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
+            previewLink: "https://example.com/preview",
             githubLink: "https://github.com/yourusername/lz-web"
         }
     ];
@@ -58,4 +58,4 @@ const Projects = () => {
     );
 };
 
-export default Projects; 
+export default Projects;  
