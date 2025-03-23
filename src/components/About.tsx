@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const About = () => {
     return (
-        <section className="w-full bg-white">
+        <section id="om-mig" className="w-full bg-white">
             <div className="mx-auto w-full px-4 sm:px-6 md:px-8 max-w-3xl lg:max-w-5xl py-30">
                 <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
                     {/* Left side with stacked cards */}

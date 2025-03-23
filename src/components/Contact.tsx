@@ -3,7 +3,7 @@ import { MdEmail } from 'react-icons/md';
 
 const Contact = () => {
     return (
-        <section className="w-full bg-white">
+        <section id="kontakt" className="w-full bg-white">
             <div className="mx-auto w-full px-4 sm:px-6 md:px-8 max-w-3xl lg:max-w-5xl py-20">
                 <div className="space-y-4">
                     <h2 className="text-3xl md:text-4xl font-bold text-heading">
