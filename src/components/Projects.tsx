@@ -8,7 +8,7 @@ const Projects = () => {
             title: "Anslagstavla-App",
             description: "En fullstack-applikation för en digital anslagstavla där användare kan posta, ändra, ta bort och filtrera meddelanden efter användare och datum. Frontend byggd med React och deployad på AWS S3. Backend använder Serverless Framework med API Gateway, Lambda och DynamoDB.",
             image: "/anslag.png",
-            technologies: ["HTML", "CSS", "JavaScript", "React"],
+            technologies: ["React", "CSS", "JavaScript", "AWS"],
             previewLink: "https://example.com/preview",
             githubLink: "https://github.com/yourusername/anslagstavla"
         },
@@ -16,7 +16,7 @@ const Projects = () => {
             title: "PickMyPlate",
             description: "En interaktiv app som inspirerar matlagning genom att föreslå recept från ett externt API. Användare väljer matkategori eller får slumpmässiga förslag, och utforskar detaljerade receptinstruktioner, ingredienslistor och videotutorials.",
             image: "/mealmock.png",
-            technologies: ["HTML", "TailwindCSS", "JavaScript", "React"],
+            technologies: ["HTML", "Tailwind", "JavaScript", "React"],
             previewLink: "https://example.com/preview",
             githubLink: "https://github.com/yourusername/pickmyplate"
         },
@@ -32,7 +32,7 @@ const Projects = () => {
             title: "LZ Web Landing Page",
             description: "En landing page för en just nu fiktiv webbyrå i Arvika, skapad för att få en djupare förståelse för TailwindCSS och Typescript, med extra fokus på design och användarupplevelse.",
             image: "/lzweb.png",
-            technologies: ["Next.js", "TypeScript", "Tailwind"],
+            technologies: ["React", "TypeScript", "Tailwind"],
             githubLink: "https://github.com/yourusername/lz-web"
         }
     ];

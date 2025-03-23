@@ -14,6 +14,19 @@ interface ProjectCardProps {
     imagePosition: 'left' | 'right';
 }
 
+const getTechColor = (tech: string): { bg: string; text: string } => {
+    const colors: { [key: string]: { bg: string; text: string } } = {
+        'React': { bg: '#3B82F6', text: '#FFFFFF' },
+        'TypeScript': { bg: '#2563EB', text: '#FFFFFF' },
+        'JavaScript': { bg: '#EAB308', text: '#FFFFFF' },
+        'HTML': { bg: '#DC2626', text: '#FFFFFF' },
+        'CSS': { bg: '#0EA5E9', text: '#FFFFFF' },
+        'Tailwind': { bg: '#14B8A6', text: '#FFFFFF' },
+        'AWS': { bg: '#F97316', text: '#FFFFFF' }
+    };
+    return colors[tech] || { bg: '#2A2A2A', text: '#FFFFFF' };
+};
+
 const ProjectCard = ({ title, description, image, technologies, previewLink, githubLink, imagePosition }: ProjectCardProps) => {
     const contentOrder = imagePosition === 'left' ? 'md:order-2' : '';
     const imageOrder = imagePosition === 'left' ? 'md:order-1' : '';
@@ -25,14 +38,22 @@ const ProjectCard = ({ title, description, image, technologies, previewLink, git
                     <h3 className="text-2xl md:text-3xl font-semibold text-heading">{title}</h3>
                     <p className="text-base md:text-lg text-paragraph leading-relaxed">{description}</p>
                     <div className="flex flex-wrap gap-2">
-                        {technologies.map((tech, index) => (
-                            <span
-                                key={index}
-                                className="px-4 py-2 bg-[#00856F] text-white rounded-md text-sm md:text-base font-medium"
-                            >
-                                {tech}
-                            </span>
-                        ))}
+                        {technologies.map((tech, index) => {
+                            const { bg, text } = getTechColor(tech);
+                            return (
+                                <span
+                                    key={index}
+                                    className="px-3 py-1.5 rounded-md text-sm font-medium"
+                                    style={{ 
+                                        backgroundColor: bg, 
+                                        color: text,
+                                        border: `1px solid ${text === '#FFFFFF' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)'}`
+                                    }}
+                                >
+                                    {tech}
+                                </span>
+                            );
+                        })}
                     </div>
                     <div className="flex gap-4 pt-4">
                         {previewLink && (
