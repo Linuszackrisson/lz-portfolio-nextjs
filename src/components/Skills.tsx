@@ -29,6 +29,11 @@ const skills: Skill[] = [
     description: "Sen jag blev introudcerad till TypeScript 2023 har jag inte använt något annat. Det är numera en stor del av min vardag."
   },
   {
+    name: "SQL",
+    icon: "postgresql",
+    description: "Grundläggande kunskaper i SQL för databashantering och datamodellering."
+  },
+  {
     name: "React",
     icon: "react",
     description: "React tog mig till nya höjder. Ett fantastiskt ramverk jag använder till nästan alla projekt."
