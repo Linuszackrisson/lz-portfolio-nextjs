@@ -33,7 +33,7 @@ const Projects = () => {
             title: "Morgan Freeware",
             description: "En plattform där användare kan hitta gratis alternativ till kostsam programvara, bläddra bland kategorier och betygsätta olika program. Genom projektet fick jag en djupare förståelse för fullstack-utveckling, inklusive databashantering, backend-logik och frontend-design. ",
             image: "/morganfreeware.png",
-            technologies: ["Next.js", "TypeScript", "Tailwind", "Supabase", "PostgreSQL"],
+            technologies: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
             githubLink: "https://github.com/yourusername/lz-web"
         }
     ];
