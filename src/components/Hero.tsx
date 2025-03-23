@@ -37,7 +37,9 @@ const Hero = () => {
               />
             </div>
           </div>
-          <Skills />
+          <div className="mt-20">
+            <Skills />
+          </div>
         </div>
       </div>
     </section>

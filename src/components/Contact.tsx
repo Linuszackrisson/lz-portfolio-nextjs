@@ -9,7 +9,7 @@ const Contact = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-heading mb-8">
                         Kontakt
                     </h2>
-                    <p className="text-base md:text-lg text-paragraph max-w-2xl">
+                    <p className="text-base md:text-lg text-paragraph max-w-2xl mb-8">
                         Låt oss göra världen vackrare tillsammans - en webbsida i taget
                     </p>
                     

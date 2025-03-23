@@ -86,7 +86,7 @@ const Skills = () => {
   return (
     <div className="w-full">
         <div className="skill-title flex flex-col w-full mt-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-heading mb-8">Teknisk Kompetens</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-heading mb-8">Teknisk Kompetens</h2>
           <div className="flex items-center gap-2 text-base md:text-lg text-paragraph mb-8">
             <span>Klicka på ikonerna för att läsa mer om mina erfarenheter</span>
             <span className="animate-bounce">↓</span>
