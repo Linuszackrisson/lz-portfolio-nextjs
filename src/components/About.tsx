@@ -39,6 +39,9 @@ const About = () => {
                                 Utbildningen innehöll även flera backendkurser, vilket väckte mitt intresse för att bygga helhetslösningar.
                             </p>
                             <p className="text-base md:text-lg text-paragraph leading-relaxed">
+                                Studierna gav mig mycket, men på kvällarna när jag byggde egna projekt lärde jag mig mest.
+                            </p>
+                            <p className="text-base md:text-lg text-paragraph leading-relaxed">
                                 De tekniker jag trivs bäst med är <span className="text-[#61DAFB]">React</span>, <span className="text-[#3178C6]">TypeScript</span> och <span className="text-[#38B2AC]">Tailwind</span>, ofta i kombination med <span className="text-[#3ECF8E]">Supabase</span>.
                             </p>
                             <p className="text-base md:text-lg text-paragraph leading-relaxed">
