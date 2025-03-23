@@ -19,7 +19,7 @@ const Contact = () => {
                             className="flex items-center gap-4 text-paragraph hover:text-secondary transition-colors group"
                         >
                             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                                <FaPhone className="text-xl text-secondary" />
+                                <FaPhone className="text-xl text-heading" />
                             </div>
                             <span className="text-base md:text-lg font-semibold">073-834 66 69</span>
                         </a>
@@ -28,7 +28,7 @@ const Contact = () => {
                             className="flex items-center gap-4 text-paragraph hover:text-secondary transition-colors group"
                         >
                             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                                <MdEmail className="text-xl text-secondary" />
+                                <MdEmail className="text-xl text-heading" />
                             </div>
                             <span className="text-base md:text-lg font-semibold">Linus.g.zackrisson@gmail.com</span>
                         </a>
