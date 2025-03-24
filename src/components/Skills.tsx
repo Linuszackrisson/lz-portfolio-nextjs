@@ -1,5 +1,18 @@
 'use client'
 import React, { useState } from 'react';
+import {
+  useFloating,
+  autoUpdate,
+  offset,
+  flip,
+  shift,
+  arrow,
+  useClick,
+  useInteractions,
+  FloatingArrow,
+  FloatingContext,
+  useDismiss
+} from '@floating-ui/react';
 
 interface Skill {
   name: string;
@@ -80,37 +93,113 @@ const skills: Skill[] = [
   }
 ];
 
+const SkillTooltip = ({ 
+  skill, 
+  isOpen, 
+  arrowRef, 
+  context,
+  onClose 
+}: { 
+  skill: Skill; 
+  isOpen: boolean; 
+  arrowRef: React.RefObject<SVGSVGElement | null>; 
+  context: FloatingContext;
+  onClose: () => void;
+}) => {
+  if (!isOpen) return null;
+  
+  return (
+    <div className="z-50 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg w-64 relative">
+      <button 
+        onClick={onClose}
+        className="absolute top-2 right-2 w-5 h-5 flex items-center justify-center text-red-500 hover:text-red-700 transition-colors"
+        aria-label="Stäng"
+      >
+        <svg 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          className="w-4 h-4"
+        >
+          <path d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <h3 className="text-base md:text-lg font-semibold text-heading mb-2 pr-6">{skill.name}</h3>
+      <p className="text-sm md:text-base text-paragraph leading-relaxed">{skill.description}</p>
+      <FloatingArrow ref={arrowRef} context={context} fill="white" className="dark:fill-gray-800" />
+    </div>
+  );
+};
+
 const Skills = () => {
   const [activeSkill, setActiveSkill] = useState<Skill | null>(null);
+  const arrowRef = React.useRef<SVGSVGElement | null>(null);
+
+  const { refs, floatingStyles, context } = useFloating({
+    open: activeSkill !== null,
+    onOpenChange: (open) => {
+      if (!open) setActiveSkill(null);
+    },
+    middleware: [
+      offset(12),
+      flip(),
+      shift(),
+      arrow({ element: arrowRef }),
+    ],
+    whileElementsMounted: autoUpdate,
+  });
+
+  const click = useClick(context);
+  const dismiss = useDismiss(context);
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    click,
+    dismiss
+  ]);
+
+  const handleClose = () => {
+    setActiveSkill(null);
+  };
 
   return (
     <div className="w-full">
-        <div className="skill-title flex flex-col w-full mt-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-heading mb-8">Teknisk Kompetens</h2>
-          <div className="flex items-center gap-2 text-base md:text-lg text-paragraph mb-8">
-            <span>Klicka på ikonerna för att läsa mer om mina erfarenheter</span>
-            <span className="animate-bounce">↓</span>
+      <div className="skill-title flex flex-col w-full mt-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-heading mb-8">Teknisk Kompetens</h2>
+        <div className="flex items-center gap-2 text-base md:text-lg text-paragraph mb-8">
+          <span>Klicka på ikonerna för att läsa mer om mina erfarenheter</span>
+          <span className="animate-bounce">↓</span>
+        </div>
+      </div>
+      <div className="skill-icons flex flex-wrap justify-center gap-2">
+        {skills.map((skill) => (
+          <div key={skill.name} className="relative">
+            <img
+              ref={activeSkill?.name === skill.name ? refs.setReference : undefined}
+              src={`https://skillicons.dev/icons?i=${skill.icon}`}
+              alt={skill.name}
+              className="w-13 h-13 hover:opacity-80 transition-opacity cursor-pointer"
+              {...getReferenceProps({
+                onClick: () => setActiveSkill(activeSkill?.name === skill.name ? null : skill)
+              })}
+            />
           </div>
+        ))}
+      </div>
+      {activeSkill && (
+        <div
+          ref={refs.setFloating}
+          style={floatingStyles}
+          {...getFloatingProps()}
+        >
+          <SkillTooltip 
+            skill={activeSkill} 
+            isOpen={activeSkill !== null}
+            arrowRef={arrowRef}
+            context={context}
+            onClose={handleClose}
+          />
         </div>
-        <div className="skill-icons flex flex-wrap justify-center gap-2">
-          {skills.map((skill) => (
-            <div key={skill.name} className="relative">
-              <img
-                src={`https://skillicons.dev/icons?i=${skill.icon}`}
-                alt={skill.name}
-                className="w-13 h-13 hover:opacity-80 transition-opacity cursor-pointer"
-                onClick={() => setActiveSkill(activeSkill?.name === skill.name ? null : skill)}
-              />
-              {activeSkill?.name === skill.name && (
-                <div className="absolute z-50 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg mt-2 w-64">
-                  <h3 className="text-base md:text-lg font-semibold text-heading mb-2">{skill.name}</h3>
-                  <p className="text-sm md:text-base text-paragraph leading-relaxed">{skill.description}</p>
-                  <div className="absolute -top-2 left-4 w-4 h-4 bg-white dark:bg-gray-800 transform rotate-45"></div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+      )}
     </div>
   );
 };
