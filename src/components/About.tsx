@@ -11,22 +11,22 @@ const About = () => {
                     {/* Left side with stacked cards */}
                     <div className="w-full md:w-1/2 h-[400px] relative group">
                         {/* First card */}
-                        <div className="absolute top-0 left-0 w-full h-full transform -rotate-1 transition-all duration-300 z-0 group-hover:rotate-0 group-hover:z-10">
+                        <div className="absolute inset-0 transform -rotate-1 transition-all duration-300 z-0 group-hover:rotate-0 group-hover:z-10">
                             <Image
                                 src="/maltesquare.jpg"
                                 alt="Maltes square"
                                 fill
-                                className="object-cover rounded-md  border-1 border-gray-200/90"
+                                className="object-cover rounded-md border-1 border-gray-200/90"
                                 priority
                             />
                         </div>
                         {/* Second card */}
-                        <div className="absolute top-4 left-4 w-full h-full transform rotate-1 transition-all duration-300 z-10 group-hover:rotate-0 group-hover:z-0">
+                        <div className="absolute inset-0 transform translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4 rotate-1 transition-all duration-300 z-10 group-hover:rotate-0 group-hover:z-0">
                             <Image
                                 src="/tommysquare.jpg"
                                 alt="Tommys square"
                                 fill
-                                className="object-cover rounded-md  border-1 border-gray-200/90"
+                                className="object-cover rounded-md border-1 border-gray-200/90"
                             />
                         </div>
                     </div>
