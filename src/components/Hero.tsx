@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section id="hem" className="w-full bg-[#f9f9f9]">
       <div className="min-h-screen mx-auto w-full px-4 sm:px-6 md:px-8 max-w-3xl lg:max-w-5xl">
-        <div className="flex flex-col items-left justify-center min-h-screen pt-16 md:pt-0">
+        <div className="flex flex-col items-left justify-center min-h-screen pt-24 md:pt-24">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-x-16">
             <div className="lg:w-1/2 text-center lg:text-left">
               <h1 className="text-heading text-6xl font-bold leading-tight">
@@ -18,7 +18,7 @@ const Hero = () => {
               </p>
               
               <div className="flex justify-center lg:justify-start mt-10 space-x-4 text-heading">
-                <a href="https://www.linkedin.com/in/linus-zackrisson/" target="_blank" rel="noopener noreferrer" className="text-5xl hover:text-[#0d9275] transition-colors">
+                <a href="https://www.linkedin.com/in/linus-zackrisson-367542273/" target="_blank" rel="noopener noreferrer" className="text-5xl hover:text-[#0d9275] transition-colors">
                   <FaLinkedin />
                 </a>
                 <a href="https://github.com/linuszackrisson" target="_blank" rel="noopener noreferrer" className="text-5xl hover:text-[#0d9275] transition-colors">

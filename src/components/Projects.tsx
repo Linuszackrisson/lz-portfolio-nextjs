@@ -42,7 +42,7 @@ const Projects = () => {
         <section id="projekt" className="w-full bg-[#f9f9f9] py-20">
             <div className="mx-auto w-full px-4 sm:px-6 md:px-8 max-w-3xl lg:max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold text-heading mb-8">Projekt</h2>
-                <p className="text-base md:text-lg text-paragraph mb-8">Här är några av mina senaste projekt, fler hittar du <a href="https://github.com/yourusername" className="text-[#00856F] hover:underline">här</a>.</p>
+                <p className="text-base md:text-lg text-paragraph mb-8">Här är några av mina senaste privata projekt, fler projekt och examinationer hittar du <a href="https://github.com/linuszackrisson" className="text-[#00856F] hover:underline">här</a>.</p>
                 
                 <div className="grid grid-cols-1 gap-16">
                     {projects.map((project, index) => (

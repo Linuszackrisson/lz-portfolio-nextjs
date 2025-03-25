@@ -170,7 +170,7 @@ const Skills = () => {
           <span className="animate-bounce">↓</span>
         </div>
       </div>
-      <div className="skill-icons flex flex-wrap justify-center gap-2">
+      <div className="skill-icons flex flex-wrap justify-left gap-2">
         {skills.map((skill) => (
           <div key={skill.name} className="relative">
             <img
